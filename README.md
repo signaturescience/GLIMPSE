@@ -9,21 +9,22 @@
 ### Usage
 
 ```sh
-docker pull stephenturner/glimpse
+docker pull ghcr.io/signaturescience/glimpse
+docker tag ghcr.io/signaturescience/glimpse glimpse
 
-docker run --rm stephenturner/glimpse chunk
-docker run --rm stephenturner/glimpse concordance
-docker run --rm stephenturner/glimpse ligate
-docker run --rm stephenturner/glimpse phase
-docker run --rm stephenturner/glimpse sample
-docker run --rm stephenturner/glimpse snparray
-docker run --rm stephenturner/glimpse stats
+docker run --rm glimpse chunk
+docker run --rm glimpse concordance
+docker run --rm glimpse ligate
+docker run --rm glimpse phase
+docker run --rm glimpse sample
+docker run --rm glimpse snparray
+docker run --rm glimpse stats
 ```
 
 Alternatively, use singularity:
 
 ```sh
-singularity pull glimpse.sif docker://stephenturner/glimpse
+singularity pull glimpse.sif docker://ghcr.io/signaturescience/glimpse
 
 singularity run glimpse.sif chunk
 singularity run glimpse.sif concordance
@@ -37,7 +38,7 @@ singularity run glimpse.sif stats
 ### Build
 
 ```sh
-git pull https://github.com/stephenturner/GLIMPSE
+git pull https://github.com/signaturescience/GLIMPSE
 cd GLIMPSE
 docker build --no-cache -t glimpse .
 ```
